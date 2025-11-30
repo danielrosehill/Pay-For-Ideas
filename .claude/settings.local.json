@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__replicate__search",
+      "mcp__replicate__get_models",
+      "mcp__replicate__create_predictions"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,13 +1,25 @@
-# Distributed Feature Requests (Notes, Idea)
+# Pay For Ideas
+
+![Banner](images/banner-pay-for-ideas.png)
 
 > **TL;DR**: Paying customers who report bugs and suggest features for commercial software often save companies millions—yet receive nothing in return. This creates an unsustainable asymmetry where vendors treat community engagement as free labor. This note proposes a compensation framework to fix that.
 
 ---
 
-Human/AI Breakdown:
+## Attribution
 
-Idea, original draft: me
-Light edits, subheadings: Claude Code
+**Human contributions:**
+- Original concept and idea
+- Initial draft and core arguments
+- Personal anecdotes and examples
+
+**AI contributions (Claude Code):**
+- Light editing and structural improvements
+- Subheadings and document organization
+- Mermaid diagrams illustrating the concepts
+- Generated illustrations using Nano Banana
+
+This document was developed collaboratively. The core thesis and arguments are human-originated; AI assisted with presentation and visualization.
 
 ---
 
@@ -27,37 +39,48 @@ I recently identified and documented a bug in a major software platform used by 
 
 In other instances, I've seen feature requests implemented and win plaudits from the user community (I have lots of bad ideas but the odd good one).
 
-### The Current Model
+### The Current Model: A Tale of Two Contributors
+
+![Asymmetry Balance](images/asymmetry-balance.png)
 
 ```mermaid
-flowchart LR
-    subgraph Users ["Paying Users"]
-        U1[Bug Reports]
-        U2[Feature Requests]
-        U3[Community Testing]
+flowchart TB
+    subgraph Output ["Same Output: Bug Reports, Feature Ideas, Testing"]
+        direction LR
+        O1[Bug Identified]
+        O2[Feature Suggested]
+        O3[Product Tested]
     end
 
-    subgraph Vendor ["Commercial Vendor"]
-        V1[Product Team]
-        V2[Improved Product]
-        V3[Increased Revenue]
+    subgraph Internal ["INTERNAL: Paid Staff"]
+        direction TB
+        I1[QA Engineer]
+        I2[Product Manager]
+        I3[UX Researcher]
+        PAY1[$80-150k/year]
     end
 
-    U1 -->|Free| V1
-    U2 -->|Free| V1
-    U3 -->|Free| V1
-    V1 --> V2
-    V2 --> V3
+    subgraph External ["EXTERNAL: Paying Customers"]
+        direction TB
+        E1[Community Member]
+        E2[Power User]
+        E3[Beta Tester]
+        PAY2[$0 + pays subscription]
+    end
 
-    V3 -.->|Nothing| Users
+    Internal -->|Produces| Output
+    External -->|Produces| Output
+    Output --> Company[Company Benefits]
 
-    style U1 fill:#ffcccc
-    style U2 fill:#ffcccc
-    style U3 fill:#ffcccc
-    style V3 fill:#ccffcc
+    PAY1 -.->|Receives| Internal
+    PAY2 -.->|Receives| External
+
+    style PAY1 fill:#90EE90,stroke:#228B22
+    style PAY2 fill:#ff6b6b,stroke:#cc0000
+    style Company fill:#90EE90
 ```
 
-The flow is entirely one-directional. Value flows from users to vendors. Compensation flows nowhere.
+**The disparity is stark:** Internal staff and external users often provide *identical* value—bug reports, feature ideas, usability feedback—but compensation flows in opposite directions. One group gets paid handsomely; the other pays for the privilege of contributing.
 
 ---
 
@@ -107,6 +130,8 @@ The asymmetry is stark. In one model, the exchange is equitable. In the other, i
 
 ## The Real Cost of "Free" Community Input
 
+![Unpaid Labor Metaphor](images/unpaid-labor-metaphor.png)
+
 Let's be blunt about what's actually happening:
 
 - A user identifies a critical bug that's causing customer churn
@@ -131,6 +156,8 @@ The vendors are getting professional-grade input at zero cost, while simultaneou
 ---
 
 ## A Fairer System: Compensation to Prevent Community Contribution Churn
+
+![Fair Exchange System](images/fair-exchange-system.png)
 
 A question to think about is: *"well, what would a fairer system be?"*
 
